@@ -35,16 +35,3 @@ from functools import reduce
 lst = [5,10,15,20]
 result= reduce(lambda x,y:x+y,lst) #50 = 5+10+15+20
 print(result)
-
-#Example 7: Decorators
-def decor(func):
-    def innerfunc():
-        a = func()
-        return a*2
-    return innerfunc()
-
-@decor
-def number():
-    return 5
-
-print(number)
